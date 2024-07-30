@@ -187,7 +187,8 @@ install() {
     elif [[ ${screen} == '4k' ]]; then
       gfxmode="GRUB_GFXMODE=3840x2160,auto"
     elif [[ ${screen} == '2k' ]]; then
-      gfxmode="GRUB_GFXMODE=2560x1440,auto"
+      # gfxmode="GRUB_GFXMODE=2560x1440,auto"
+      gfxmode="GRUB_GFXMODE=2560x1600,auto"
     elif [[ ${screen} == 'ultrawide2k' ]]; then
       gfxmode="GRUB_GFXMODE=3440x1440,auto"
     fi
@@ -317,7 +318,7 @@ run_dialog() {
     --radiolist "Choose your Display Resolution : " 15 40 5 \
       1 "1080p (1920x1080)" on  \
       2 "1080p ultrawide (2560x1080)" off  \
-      3 "2k (2560x1440)" off \
+      3 "2k (2560x1600)" off \
       4 "4k (3840x2160)" off \
       5 "1440p ultrawide (3440x1440)" off --output-fd 1 )
       case "$tui" in
